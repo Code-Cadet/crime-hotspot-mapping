@@ -101,7 +101,7 @@ crime-hotspot-mapping/
 ├── visualizations/       # Generated plots and maps
 ├── requirements.txt      # Python dependencies
 ├── LICENSE              # MIT License
-└── README.md           # This file
+└── README.md           # Project overview and documentation
 ```
 
 ## 📊 Usage
