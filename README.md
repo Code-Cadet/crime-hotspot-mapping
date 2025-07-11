@@ -1,15 +1,17 @@
-# Crime Hotspot Mapping
+# Crime Hotspot Simulation and Mapping - Roysambu Ward
 
-A data-driven system for predicting and mapping crime hotspots using machine learning and geospatial analysis tools. This project combines statistical modeling, geospatial data processing, and interactive visualization to identify areas with high crime probability.
+A comprehensive data-driven system for simulating, predicting, and mapping crime hotspots in Roysambu ward, Nairobi. This project combines agent-based modeling, machine learning, geospatial analysis, and interactive visualization to understand and predict crime patterns in urban environments.
 
 ## 🚀 Features
 
-- **Predictive Modeling**: Machine learning algorithms to predict crime hotspots
-- **Geospatial Analysis**: Advanced spatial analysis using GeoPandas and spatial statistics
-- **Interactive Visualizations**: Dynamic maps and charts using Folium and Plotly
-- **Data Processing Pipeline**: Automated ETL processes for crime data
-- **Risk Assessment**: Quantitative risk scoring for geographic areas
+- **Agent-Based Simulation**: Multi-agent crime simulation with criminal, guardian, and victim agents
+- **Risk Terrain Modeling**: Advanced spatial risk factor analysis and surface generation
+- **Spatial Clustering**: DBSCAN, K-means, and hierarchical clustering for hotspot identification
+- **Machine Learning Prediction**: Multiple ML algorithms for crime hotspot forecasting
+- **Interactive Dashboard**: Streamlit-based web interface for visualization and analysis
+- **Geospatial Analysis**: Comprehensive spatial analysis using GeoPandas and spatial statistics
 - **Temporal Analysis**: Time-series analysis for crime pattern identification
+- **Data Processing Pipeline**: Automated ETL processes for crime data cleaning and feature engineering
 
 ## 📋 Table of Contents
 
@@ -75,33 +77,45 @@ A data-driven system for predicting and mapping crime hotspots using machine lea
 ## 📁 Project Structure
 
 ```
-crime-hotspot-mapping/
-├── app/                    # Web application (Flask/Streamlit)
-│   ├── templates/         # HTML templates
-│   ├── static/           # CSS, JS, images
-│   └── app.py            # Main application file
-├── data/                  # Data storage
-│   ├── raw/              # Original datasets
-│   ├── processed/        # Cleaned and processed data
-│   └── external/         # External datasets (demographics, etc.)
-├── models/               # Trained models and model artifacts
-│   ├── saved_models/     # Serialized model files
-│   ├── metrics/          # Model performance metrics
-│   └── configs/          # Model configuration files
-├── notebooks/            # Jupyter notebooks for analysis
-│   ├── exploratory/      # Exploratory data analysis
-│   ├── modeling/         # Model development
-│   └── visualization/    # Visualization experiments
-├── src/                  # Source code
-│   ├── data/             # Data processing modules
-│   ├── features/         # Feature engineering
-│   ├── models/           # Model classes and training
-│   ├── visualization/    # Plotting and mapping functions
-│   └── utils/            # Utility functions
-├── visualizations/       # Generated plots and maps
-├── requirements.txt      # Python dependencies
-├── LICENSE              # MIT License
-└── README.md           # Project overview and documentation
+crime-hotspot-simulation/
+├── .venv/                  # Virtual environment
+├── data/                   # Data storage
+│   ├── raw/                # Raw or simulated datasets
+│   ├── processed/          # Cleaned and feature-engineered data
+│   └── risk_layers/        # GIS shapefiles and risk terrain CSVs
+├── simulation/             # Agent-based crime simulation
+│   ├── agents.py           # Agent definitions (criminals, guardians, victims)
+│   ├── environment.py      # Environment setup for Roysambu ward
+│   ├── simulator.py        # Main simulation runner
+│   └── __init__.py         # Package initialization
+├── risk/                   # Risk terrain modeling
+│   ├── risk_model.py       # Risk layer generator and RTM implementation
+│   ├── shapefiles/         # Raw shapefile data for Roysambu
+│   └── __init__.py         # Package initialization
+├── clustering/             # Spatial clustering analysis
+│   ├── cluster_analysis.py # DBSCAN, K-means, hierarchical clustering
+│   └── __init__.py         # Package initialization
+├── prediction/             # Machine learning models
+│   ├── model_train.py      # Training scripts for ML models
+│   ├── evaluate.py         # Model evaluation and metrics
+│   └── __init__.py         # Package initialization
+├── app/                    # Streamlit dashboard
+│   ├── dashboard.py        # Main Streamlit application
+│   ├── static/             # CSS, JS, images
+│   ├── templates/          # HTML templates
+│   └── __init__.py         # Package initialization
+├── src/                    # Core utilities and toolbox
+│   ├── data/               # ETL and preprocessing tools
+│   │   ├── preprocessing.py # Data cleaning and feature engineering
+│   │   └── __init__.py     # Package initialization
+│   └── __init__.py         # Package initialization
+├── notebooks/              # Jupyter notebooks for analysis
+│   ├── exploratory/        # Exploratory data analysis
+│   ├── modeling/           # ML model prototyping
+│   └── visualization/      # Visualization experiments
+├── requirements.txt        # Python dependencies
+├── .gitignore             # Git ignore rules
+└── README.md              # Project overview and instructions
 ```
 
 ## 📊 Usage
